@@ -19,8 +19,8 @@ jobs:
       run: npm run build
     - name: "Deploy to Vercel"
       env:
-        VERCEL_TOKEN: "reactcravercel"
+        VERCEL_TOKEN: "TnGkZIMCQtAuv24OZV7p0b3H"
         VERCEL_PROJECT_ID: "prj_1PTJW5ZV3fWyA73ovvf9onmPg4KT"
         VERCEL_ORG_ID: "5EWkjHjUWIP4dgQ5esBDyitV"
       run: |
-        npx vercel --token=reactcravercel --prod
+        npx vercel --token=TnGkZIMCQtAuv24OZV7p0b3H --prod
