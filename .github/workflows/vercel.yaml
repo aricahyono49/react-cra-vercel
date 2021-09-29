@@ -23,4 +23,4 @@ jobs:
         VERCEL_PROJECT_ID: "prj_1PTJW5ZV3fWyA73ovvf9onmPg4KT"
         VERCEL_ORG_ID: "5EWkjHjUWIP4dgQ5esBDyitV"
       run: |
-        npx vercel --token ${VERCEL_TOKEN} --prod
+        npx vercel --token react-cra-vercel --prod
