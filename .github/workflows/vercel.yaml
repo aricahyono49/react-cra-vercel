@@ -1,0 +1,26 @@
+name: React CRA
+on: push
+jobs:
+  deploy-react-cra:
+    name: Menjalankan Linter di React CRA
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Install Node.js dependencies
+      run: npm install
+    - name: Run Test
+      run: CI=true npm run test
+    - name: Run Build
+      run: npm run build
+    - name: "Deploy to Vercel"
+      env:
+        VERCEL_TOKEN: "react-cra-vercel"
+        VERCEL_PROJECT_ID: "prj_1PTJW5ZV3fWyA73ovvf9onmPg4KT"
+        VERCEL_ORG_ID: "5EWkjHjUWIP4dgQ5esBDyitV"
+      run: |
+        npx vercel --token ${VERCEL_TOKEN} --prod
